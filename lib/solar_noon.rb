@@ -12,7 +12,6 @@ module SolarNoon
   def SolarNoon.calculate(date, longitude)
     raise ArgumentError.new "Invalid longitude" unless -180.0 <= longitude && longitude <= 180.0
 
-    t = jd_centuries(date)
     eq_time = true_solar_time_diff_mean_solar_time date
 
     minutes = 720 - (longitude * 4) - eq_time # in minutes
