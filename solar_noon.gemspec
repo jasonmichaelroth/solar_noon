@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "solar_noon"
-  s.version     = "1.0.0.pre"
+  s.version     = "1.0.0"
   s.authors     = ["Jason Roth"]
   s.email       = ["jasonmichaelroth@gmail.com"]
   s.homepage    = "https://github.com/jasonmichaelroth/solar_noon"

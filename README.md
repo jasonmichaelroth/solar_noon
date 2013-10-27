@@ -28,3 +28,10 @@ Time.now.solar_noon(-105.1)
 ```
 $ bundle exec rake test
 ```
+
+
+## History
+
+1.0.0
+
+- released
