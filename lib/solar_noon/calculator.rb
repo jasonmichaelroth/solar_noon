@@ -1,5 +1,4 @@
 require 'date'
-require File.expand_path('../../core-ext/time', __FILE__)
 
 module SolarNoon
 
@@ -8,7 +7,7 @@ module SolarNoon
     attr_reader :date
 
     def initialize(date)
-      @date = date
+      @date = date.to_datetime
     end
 
     # Calculate noon for a given date at a given longitude
