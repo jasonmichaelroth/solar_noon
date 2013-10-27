@@ -15,7 +15,7 @@ class Time
 
   # return a Time instance of solar noon for the specified day and longitude
   def solar_noon(longitude)
-    SolarNoon.calculate(self, longitude)
+    SolarNoon::Calculator.new(self).calculate(longitude)
   end
 
 end
