@@ -10,13 +10,6 @@ class SolarNoonTest < Minitest::Spec
     assert_in_delta expected, actual, 60
   end
 
-  test "#calculate" do
-    skip "PENDING"
-    "should work with a Date and longitude"
-    "should work with a DateTime and longitude"
-    "should work with a Time and longitude"
-  end
-
   test "DST time - 2011-03-26 11:42:36 MDT at -105.0" do
     expected = DateTime.civil(2011, 3, 26, 19, 5, 00, 'UTC')
     assert_within_one_minute expected, Date.civil(2011, 3, 26).solar_noon(-105.0)
