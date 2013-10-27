@@ -1,13 +1,7 @@
-require 'bundler'
-require 'rspec/core/rake_task'
+require "bundler/gem_tasks"
+require "rake/testtask"
 
-Bundler::GemHelper.install_tasks
-
-RSpec::Core::RakeTask.new :spec
-
-task :default => :spec
-
-desc "Open a console with the development environment"
-task :console do
-  exec "irb -I lib -r rubygems -r solar_noon"
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.test_files = FileList['test/**/*_test.rb']
 end

@@ -16,10 +16,12 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "solar_noon"
 
-  s.add_development_dependency 'rspec', '>= 2.5.0'
-
   s.files         = `git ls-files`.split("\n")
-  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.test_files    = `git ls-files -- test/*`.split("\n")
   s.require_paths = ["lib"]
+
+  s.add_development_dependency 'rake', '~> 10.0'
+  s.add_development_dependency 'bundler', '~> 1.3'
+  s.add_development_dependency 'minitest', '~> 5'
 
 end
