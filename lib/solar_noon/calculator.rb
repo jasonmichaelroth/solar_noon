@@ -1,3 +1,6 @@
+require 'date'
+require File.expand_path('../../core-ext/time', __FILE__)
+
 module SolarNoon
 
   class Calculator

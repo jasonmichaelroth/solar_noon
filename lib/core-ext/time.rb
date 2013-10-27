@@ -13,9 +13,4 @@ class Time
     to_datetime.jd
   end
 
-  # return a Time instance of solar noon for the specified day and longitude
-  def solar_noon(longitude)
-    SolarNoon::Calculator.new(self).calculate(longitude)
-  end
-
 end
