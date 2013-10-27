@@ -25,7 +25,7 @@ class SolarNoonTest < Minitest::Spec
     assert_within_one_minute DateTime.civil(2011, 3, 26, 19, 5, 00, 'UTC'), noon
 
     noon = Time.local(2011, 3, 26, 11, 42, 36).solar_noon(-105.0)
-    assert_within_one_minute Time.utc(2011, 3, 26, 19, 5, 00), noon
+    assert_within_one_minute DateTime.civil(2011, 3, 26, 19, 5, 00, 'UTC'), noon
   end
 
   test "UTC time - 2001-06-12 19:18:15 UTC at 82.5" do
@@ -36,7 +36,7 @@ class SolarNoonTest < Minitest::Spec
     assert_within_one_minute DateTime.civil(2001, 6, 12, 6, 29, 00, 'UTC'), noon
 
     noon = Time.utc(2001, 6, 12, 19, 18, 15).solar_noon(82.5)
-    assert_within_one_minute Time.utc(2001, 6, 12, 6, 29, 00), noon
+    assert_within_one_minute DateTime.civil(2001, 6, 12, 6, 29, 00, 'UTC'), noon
   end
 
   test "future time - 2031-11-28 05:07:26 MDT at 132.2" do
@@ -47,7 +47,7 @@ class SolarNoonTest < Minitest::Spec
     assert_within_one_minute DateTime.civil(2031, 11, 28, 2, 59, 00, 'UTC'), noon
 
     noon = Time.utc(2031, 11, 28, 5, 7, 26).solar_noon(132.2)
-    assert_within_one_minute Time.utc(2031, 11, 28, 2, 59, 00), noon
+    assert_within_one_minute DateTime.civil(2031, 11, 28, 2, 59, 00, 'UTC'), noon
   end
 
 end

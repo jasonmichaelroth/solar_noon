@@ -27,9 +27,7 @@ module SolarNoon
       # Returned time is UTC
       noon = Time.utc(date.year, date.month, date.day) + (minutes * 60)
 
-      # If we started out with a Date or DateTime then convert to Datetime,
-      # otherwise just return a Time.
-      ([DateTime, Date].include? date.class) ? noon.send(:to_datetime) : noon
+      noon.to_datetime
     end
 
     private
